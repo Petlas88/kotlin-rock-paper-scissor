@@ -69,22 +69,21 @@ class MainActivity : AppCompatActivity() {
             println("${p1.wins}:${p2.wins}")
 
             if(p1.wins == scoreToWin) {
-                println("P1 wins!")
-                win_txt.text = "Blue wins!"
-                win_txt.setTextColor(Color.rgb(127,143,250))
-                win_txt.visibility = View.VISIBLE
-                p1_score.visibility  = View.INVISIBLE
-                p2_score.visibility  = View.INVISIBLE
-                score_dash.visibility  = View.INVISIBLE
+                p1.winner = true
+                showWinner(p1, p2)
+//                win_txt.text = "Blue wins!"
+//                win_txt.setTextColor(Color.rgb(127,143,250))
+
 
             } else if(p2.wins == scoreToWin) {
-                println("P2 wins!")
-                win_txt.text = "Red wins!"
-                win_txt.setTextColor(Color.rgb(253, 116, 109))
-                win_txt.visibility = View.VISIBLE
-                p1_score.visibility  = View.INVISIBLE
-                p2_score.visibility  = View.INVISIBLE
-                score_dash.visibility  = View.INVISIBLE
+                p2.winner = true
+                showWinner(p1, p2)
+//                win_txt.text = "Red wins!"
+//                win_txt.setTextColor(Color.rgb(253, 116, 109))
+//                win_txt.visibility = View.VISIBLE
+//                p1_score.visibility  = View.INVISIBLE
+//                p2_score.visibility  = View.INVISIBLE
+//                score_dash.visibility  = View.INVISIBLE
 
             }
             p1_score.text = p1.wins.toString()
@@ -116,5 +115,47 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun showWinner(p1:Player, p2:Player) {
+        win_txt.visibility = View.VISIBLE
+        p1_score.visibility  = View.INVISIBLE
+        p2_score.visibility  = View.INVISIBLE
+        score_dash.visibility  = View.INVISIBLE
+        p1_paper.visibility = View.INVISIBLE
+        p1_rock.visibility = View.INVISIBLE
+        p1_scissor.visibility = View.INVISIBLE
+        p2_paper.visibility = View.INVISIBLE
+        p2_rock.visibility = View.INVISIBLE
+        p2_scissor.visibility = View.INVISIBLE
+        p1_random.visibility = View.INVISIBLE
+        p2_random.visibility = View.INVISIBLE
+        again_button.visibility = View.VISIBLE
+        again_button.setOnClickListener {
+            p1.wins = 0
+            p2.wins = 0
+            p1_score.text = p1.wins.toString()
+            p2_score.text = p2.wins.toString()
+            win_txt.visibility = View.INVISIBLE
+            p1_score.visibility  = View.VISIBLE
+            p2_score.visibility  = View.VISIBLE
+            score_dash.visibility  = View.VISIBLE
+            p1_paper.visibility = View.VISIBLE
+            p1_rock.visibility = View.VISIBLE
+            p1_scissor.visibility = View.VISIBLE
+            p2_paper.visibility = View.VISIBLE
+            p2_rock.visibility = View.VISIBLE
+            p2_scissor.visibility = View.VISIBLE
+            p1_random.visibility = View.VISIBLE
+            p2_random.visibility = View.VISIBLE
+            again_button.visibility = View.INVISIBLE
+        }
+        if (p1.winner) {
+            win_txt.text = "Blue wins!"
+            win_txt.setTextColor(Color.rgb(127,143,250))
+        }
+        if (p2.winner) {
+            win_txt.text = "Red wins!"
+            win_txt.setTextColor(Color.rgb(253, 116, 109))
+        }
+    }
 
 }

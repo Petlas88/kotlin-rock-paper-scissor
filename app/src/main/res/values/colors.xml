@@ -6,5 +6,6 @@
     <color name="playerBlue">#7F8FFA</color>
     <color name="playerRed">#FD746D</color>
     <color name="buttonYellow">#FFEB79</color>
+    <color name="againButton">#03A9F4</color>
 
 </resources>

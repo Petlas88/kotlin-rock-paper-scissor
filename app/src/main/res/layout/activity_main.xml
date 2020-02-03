@@ -186,6 +186,21 @@
             app:layout_constraintStart_toStartOf="@+id/p2_scissor"
             app:layout_constraintTop_toBottomOf="@+id/p2_scissor" />
 
+        <Button
+            android:id="@+id/again_button"
+            android:layout_width="230dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/again_btn"
+            android:text="Play again?"
+            android:textColor="@color/buttonYellow"
+            android:textSize="30sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>
