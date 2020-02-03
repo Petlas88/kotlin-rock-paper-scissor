@@ -21,46 +21,54 @@
 
         <Button
             android:id="@+id/p1_paper"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginStart="32dp"
             android:layout_marginLeft="32dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginRight="32dp"
+            android:background="@drawable/rounded_btn"
+            android:rotation="180"
             android:text="P"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintBaseline_toBaselineOf="@+id/p1_rock"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/p1_rock"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/rounded_btn"
+            android:rotation="180"
             android:text="R"
-            app:layout_constraintBaseline_toBaselineOf="@+id/p1_paper"
-            app:layout_constraintEnd_toStartOf="@+id/p1_paper" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <Button
             android:id="@+id/p1_scissor"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/rounded_btn"
+            android:rotation="180"
             android:text="S"
-            app:layout_constraintBaseline_toBaselineOf="@+id/p1_paper"
+            app:layout_constraintBaseline_toBaselineOf="@+id/p1_rock"
+            app:layout_constraintEnd_toStartOf="@+id/p1_rock"
             app:layout_constraintStart_toEndOf="@+id/p1_paper" />
 
         <Button
             android:id="@+id/p1_random"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="8dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/rounded_btn"
+            android:rotation="180"
             android:text="?"
-            app:layout_constraintStart_toStartOf="@+id/p1_paper"
-            app:layout_constraintTop_toBottomOf="@+id/p1_paper" />
+            app:layout_constraintBottom_toTopOf="@+id/p1_scissor"
+            app:layout_constraintEnd_toEndOf="@+id/p1_scissor" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -115,6 +123,19 @@
             app:layout_constraintEnd_toStartOf="@+id/p2_score"
             app:layout_constraintStart_toEndOf="@+id/p1_score"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/win_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/playerBlue"
+            android:textSize="60sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -128,47 +149,50 @@
 
         <Button
             android:id="@+id/p2_paper"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/rounded_btn"
             android:text="P"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintBaseline_toBaselineOf="@+id/p2_rock"
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <Button
             android:id="@+id/p2_scissor"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/rounded_btn"
             android:text="S"
-            app:layout_constraintBaseline_toBaselineOf="@+id/p2_paper"
-            app:layout_constraintStart_toEndOf="@+id/p2_paper" />
+            app:layout_constraintBaseline_toBaselineOf="@+id/p2_rock"
+            app:layout_constraintEnd_toStartOf="@+id/p2_paper"
+            app:layout_constraintStart_toEndOf="@+id/p2_rock" />
 
         <Button
             android:id="@+id/p2_rock"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/rounded_btn"
             android:text="R"
-            app:layout_constraintBaseline_toBaselineOf="@+id/p2_paper"
-            app:layout_constraintEnd_toStartOf="@+id/p2_paper" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/p2_random"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginBottom="8dp"
-            android:text="Rn"
-            app:layout_constraintBottom_toTopOf="@+id/p2_paper"
-            app:layout_constraintEnd_toEndOf="@+id/p2_paper" />
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_btn"
+            android:text="?"
+            app:layout_constraintStart_toStartOf="@+id/p2_scissor"
+            app:layout_constraintTop_toBottomOf="@+id/p2_scissor" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

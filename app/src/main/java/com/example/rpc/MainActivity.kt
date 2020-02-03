@@ -1,7 +1,9 @@
 package com.example.rpc
 
-import androidx.appcompat.app.AppCompatActivity
+import android.graphics.Color
 import android.os.Bundle
+import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlin.random.Random
 
@@ -68,11 +70,21 @@ class MainActivity : AppCompatActivity() {
 
             if(p1.wins == scoreToWin) {
                 println("P1 wins!")
-                p1_random.text = "!!"
+                win_txt.text = "Blue wins!"
+                win_txt.setTextColor(Color.rgb(127,143,250))
+                win_txt.visibility = View.VISIBLE
+                p1_score.visibility  = View.INVISIBLE
+                p2_score.visibility  = View.INVISIBLE
+                score_dash.visibility  = View.INVISIBLE
 
             } else if(p2.wins == scoreToWin) {
                 println("P2 wins!")
-                p2_random.text = "!!"
+                win_txt.text = "Red wins!"
+                win_txt.setTextColor(Color.rgb(253, 116, 109))
+                win_txt.visibility = View.VISIBLE
+                p1_score.visibility  = View.INVISIBLE
+                p2_score.visibility  = View.INVISIBLE
+                score_dash.visibility  = View.INVISIBLE
 
             }
             p1_score.text = p1.wins.toString()
