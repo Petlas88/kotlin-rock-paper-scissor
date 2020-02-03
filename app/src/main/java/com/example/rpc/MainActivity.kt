@@ -66,10 +66,6 @@ class MainActivity : AppCompatActivity() {
             calculateRoundResult(p1, p2)
             println("${p1.wins}:${p2.wins}")
 
-            p1_random.text = p1.wins.toString()
-            p2_random.text = p2.wins.toString()
-
-
             if(p1.wins == scoreToWin) {
                 println("P1 wins!")
                 p1_random.text = "!!"
@@ -79,7 +75,8 @@ class MainActivity : AppCompatActivity() {
                 p2_random.text = "!!"
 
             }
-
+            p1_score.text = p1.wins.toString()
+            p2_score.text = p2.wins.toString()
             p1.ready = false
             p2.ready = false
         } else {
