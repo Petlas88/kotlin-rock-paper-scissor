@@ -71,19 +71,10 @@ class MainActivity : AppCompatActivity() {
             if(p1.wins == scoreToWin) {
                 p1.winner = true
                 showWinner(p1, p2)
-//                win_txt.text = "Blue wins!"
-//                win_txt.setTextColor(Color.rgb(127,143,250))
-
 
             } else if(p2.wins == scoreToWin) {
                 p2.winner = true
                 showWinner(p1, p2)
-//                win_txt.text = "Red wins!"
-//                win_txt.setTextColor(Color.rgb(253, 116, 109))
-//                win_txt.visibility = View.VISIBLE
-//                p1_score.visibility  = View.INVISIBLE
-//                p2_score.visibility  = View.INVISIBLE
-//                score_dash.visibility  = View.INVISIBLE
 
             }
             p1_score.text = p1.wins.toString()
