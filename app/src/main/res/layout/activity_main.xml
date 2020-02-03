@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
-            android:id="@+id/p_1_paper"
+            android:id="@+id/p1_paper"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="32dp"
@@ -39,8 +39,8 @@
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             android:text="R"
-            app:layout_constraintBaseline_toBaselineOf="@+id/p_1_paper"
-            app:layout_constraintEnd_toStartOf="@+id/p_1_paper" />
+            app:layout_constraintBaseline_toBaselineOf="@+id/p1_paper"
+            app:layout_constraintEnd_toStartOf="@+id/p1_paper" />
 
         <Button
             android:id="@+id/p1_scissor"
@@ -49,8 +49,8 @@
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:text="S"
-            app:layout_constraintBaseline_toBaselineOf="@+id/p_1_paper"
-            app:layout_constraintStart_toEndOf="@+id/p_1_paper" />
+            app:layout_constraintBaseline_toBaselineOf="@+id/p1_paper"
+            app:layout_constraintStart_toEndOf="@+id/p1_paper" />
 
         <Button
             android:id="@+id/p1_random"
@@ -58,8 +58,8 @@
             android:layout_height="40dp"
             android:layout_marginTop="8dp"
             android:text="?"
-            app:layout_constraintStart_toStartOf="@+id/p_1_paper"
-            app:layout_constraintTop_toBottomOf="@+id/p_1_paper" />
+            app:layout_constraintStart_toStartOf="@+id/p1_paper"
+            app:layout_constraintTop_toBottomOf="@+id/p1_paper" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
