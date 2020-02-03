@@ -47,12 +47,13 @@
             android:id="@+id/p1_scissor"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:layout_marginBottom="32dp"
             android:background="@drawable/rounded_btn"
             android:rotation="180"
             android:text="S"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="185dp" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/p1_random"
@@ -157,11 +158,12 @@
             android:id="@+id/p2_scissor"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:layout_marginTop="32dp"
             android:background="@drawable/rounded_btn"
             android:text="S"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="32dp" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/p2_rock"
