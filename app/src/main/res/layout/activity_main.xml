@@ -19,52 +19,100 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <Button
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/p1_paper"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
             android:background="@drawable/rounded_btn"
+            android:clickable="true"
             android:rotation="180"
             android:text="P"
-            app:layout_constraintBaseline_toBaselineOf="@+id/p1_scissor"
-            app:layout_constraintEnd_toStartOf="@+id/p1_scissor" />
+            app:layout_constraintEnd_toStartOf="@+id/p1_scissor"
+            app:layout_constraintTop_toTopOf="@+id/p1_scissor">
 
-        <Button
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/paper" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/p1_rock"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:background="@drawable/rounded_btn"
+            android:clickable="true"
             android:rotation="180"
-            android:text="R"
-            app:layout_constraintBaseline_toBaselineOf="@+id/p1_scissor"
-            app:layout_constraintStart_toEndOf="@+id/p1_scissor" />
+            app:layout_constraintStart_toEndOf="@+id/p1_scissor"
+            app:layout_constraintTop_toTopOf="@+id/p1_scissor">
 
-        <Button
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/rock" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/p1_scissor"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginBottom="32dp"
             android:background="@drawable/rounded_btn"
             android:rotation="180"
-            android:text="S"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent" >
 
-        <Button
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/scissor" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/p1_random"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginBottom="16dp"
             android:background="@drawable/rounded_btn"
+            android:clickable="true"
             android:rotation="180"
-            android:text="?"
             app:layout_constraintBottom_toTopOf="@+id/p1_scissor"
-            app:layout_constraintEnd_toEndOf="@+id/p1_scissor" />
+            app:layout_constraintEnd_toEndOf="@+id/p1_scissor">
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/question_mark" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -143,48 +191,98 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <Button
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/p2_paper"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:background="@drawable/rounded_btn"
-            android:text="P"
-            app:layout_constraintBaseline_toBaselineOf="@+id/p2_scissor"
-            app:layout_constraintStart_toEndOf="@+id/p2_scissor" />
+            android:clickable="true"
+            app:layout_constraintBottom_toBottomOf="@+id/p2_scissor"
+            app:layout_constraintStart_toEndOf="@+id/p2_scissor">
 
-        <Button
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/paper" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/p2_scissor"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginTop="32dp"
             android:background="@drawable/rounded_btn"
-            android:text="S"
+            android:clickable="true"
+            android:gravity="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <Button
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/scissor" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/p2_rock"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
             android:background="@drawable/rounded_btn"
-            android:text="R"
-            app:layout_constraintBaseline_toBaselineOf="@+id/p2_scissor"
-            app:layout_constraintEnd_toStartOf="@+id/p2_scissor" />
+            android:clickable="true"
+            app:layout_constraintBottom_toBottomOf="@+id/p2_scissor"
 
-        <Button
+            app:layout_constraintEnd_toStartOf="@+id/p2_scissor">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.333"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/rock" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/p2_random"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginTop="16dp"
             android:background="@drawable/rounded_btn"
-            android:text="?"
+            android:clickable="true"
             app:layout_constraintStart_toStartOf="@+id/p2_scissor"
-            app:layout_constraintTop_toBottomOf="@+id/p2_scissor" />
+            app:layout_constraintTop_toBottomOf="@+id/p2_scissor">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/question_mark" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <Button
             android:id="@+id/again_button"
