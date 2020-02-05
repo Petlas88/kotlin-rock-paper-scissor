@@ -178,6 +178,9 @@ class MainActivity : AppCompatActivity() {
             p1_random.visibility = View.VISIBLE
             p2_random.visibility = View.VISIBLE
             again_button.visibility = View.INVISIBLE
+            p2_hand.setImageDrawable(null)
+            p1_hand.setImageDrawable(null)
+            next_btn.visibility = View.INVISIBLE
         }
         if (p1.winner) {
             win_txt.text = "Blue wins!"
